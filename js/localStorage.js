@@ -55,11 +55,15 @@ const saveProductsToLocalStorage = (products, quantity) => {
 }
 
 const displayProductsFromLocalStorages = () =>{
-
+// get the value from LS
     const savedCart = getValueFromLocalStorage();
     console.log(savedCart);
+    // loop through object property using for in
+
+      // here savedCart is an object and also pass the variable into square brackets.
     for (products in savedCart) {
-        
+      
+        // obj value finds its property. 
         const quantity =savedCart[products];
         console.log(products,quantity);
         displayProducts(products,quantity);
